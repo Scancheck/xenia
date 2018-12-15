@@ -170,7 +170,6 @@ bool PPCHIRBuilder::Emit(GuestFunction* function, uint32_t flags) {
       XELOGE("Unimplemented instr %.8llX %.8X %s", address, code,
              disasm_info.name);
       Comment("UNIMPLEMENTED!");
-      DebugBreak();
     }
   }
 
