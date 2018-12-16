@@ -14,3 +14,5 @@ asking questions. they got jobs/lives/etc, so don't expect instant answers.
 
 this fork has unlocked xbla stuff and other stuff
 i will try to keep it updated every week
+![I love you when you call me Big Poppa]
+(https://cdn.discordapp.com/attachments/476415697774182406/523809138015469578/bandicam_2018-12-16_12-35-20-847.png)
