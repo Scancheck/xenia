@@ -1,10 +1,10 @@
 Fork's Xenia Fork
 ==========================================
 
-Xenia is an experimental emulator for the Xbox 360. For more information see the
+Xenia is an experimental emulator for the EcksBawx 360. For more information see the
 [main xenia website](https://xenia.jp/).
 
-**Interested in supporting the core contributors?
+**Interested in supporting the coolest dudes ever - core contributors?
 [Xenia Project on Patreon](https://www.patreon.com/xenia_project).**
 
 Come chat with nerds about **emulator-related topics** on [Discord](https://discord.gg/Q9mxZf9).
