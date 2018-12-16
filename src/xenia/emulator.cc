@@ -246,7 +246,14 @@ X_STATUS Emulator::LaunchXexFile(std::wstring path) {
   // and then get that symlinked to game:\, so
   // -> game:\foo.xex
 
-  auto mount_path = "\\Device\\Harddisk0\\Partition0";
+   // Register local directory as some commonly used mount paths
+  std::string mount_paths[] = {
+      "\\Device\\Harddisk0\\Partition0",
+      "\\Device\\Harddisk0\\Partition1",
+      "\\Device\\Harddisk0\\Partition1\\DEVKIT",
+      "\\Device\\LauncherData",
+      "\\SystemRoot",
+  };
 
   // Register the local directory in the virtual filesystem.
   auto parent_path = xe::find_base_path(path);
