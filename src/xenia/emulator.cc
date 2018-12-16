@@ -268,7 +268,7 @@ X_STATUS Emulator::LaunchXexFile(std::wstring path) {
     if (!file_system_->RegisterDevice(std::move(device))) {
       XELOGE("Unable to register host path as %s", path.c_str());
       return X_STATUS_NO_SUCH_FILE;
-    }
+    };
 
   // Create symlinks to the device.
  file_system_->RegisterSymbolicLink("game:", mount_paths[0]);
