@@ -12,6 +12,6 @@ For developer chat join `#dev` but stay on topic. Lurking is not only fine, but 
 Please check the [frequently asked questions](https://xenia.jp/faq/) page before
 asking questions. they got jobs/lives/etc, so don't expect instant answers.
 
-this fork has unlocked xbla stuff and other stuff
+this fork has unlocked xbla stuff and i commit all the coolest pull requests from the main xenia git
 i will try to keep it updated every week
 ![I love you when you call me Big Poppa](https://cdn.discordapp.com/attachments/476415697774182406/523809138015469578/bandicam_2018-12-16_12-35-20-847.png)
