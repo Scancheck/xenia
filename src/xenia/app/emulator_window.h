@@ -56,6 +56,13 @@ class EmulatorWindow {
   void GpuClearCaches();
   void ShowHelpWebsite();
   void UserlangEnglish();  
+  void UserlangJapanese();
+  void UserlangGerman();
+  void UserlangFrench();
+  void UserlangSpanish();
+  void UserlangItalian();
+  void UserlangKorean();
+  void UserlangChinese();
  
   Emulator* emulator_;
   std::unique_ptr<ui::Loop> loop_;
