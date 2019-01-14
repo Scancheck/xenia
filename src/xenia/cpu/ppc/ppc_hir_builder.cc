@@ -188,7 +188,6 @@ void PPCHIRBuilder::MaybeBreakOnInstruction(uint32_t address) {
   Comment("--break-on-instruction target");
 
   if (FLAGS_break_condition_gpr < 0) {
-    DebugBreak();
     return;
   }
 
