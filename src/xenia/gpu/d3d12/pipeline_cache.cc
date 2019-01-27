@@ -93,9 +93,7 @@ bool PipelineCache::Initialize() {
       creation_thread_count = uint32_t(FLAGS_d3d12_pipeline_creation_threads);
     }
     creation_thread_count = std::min(creation_thread_count, uint32_t(16));
-    // TODO(Triang3l): Change the thread count to something non-fixed (3 is just
-    // for testing).
-    for (uint32_t i = 0; i < 3; ++i) {
+    for (uint32_t i = 0; i < creation_thread_count; ++i) {
       std::unique_ptr<xe::threading::Thread> creation_thread =
           xe::threading::Thread::Create({}, [this]() { CreationThread(); });
       creation_thread->set_name("D3D12 Pipelines");
@@ -627,13 +625,15 @@ bool PipelineCache::GetCurrentStateDescription(
       description_out.depth_func = 0b111;
     }
 
-    // Forced early Z if the shader allows that and alpha testing is disabled.
+    // Forced early Z if the shader allows that and alpha testing and alpha to
+    // coverage are disabled.
     // TODO(Triang3l): For memexporting shaders, possibly choose this according
     // to the early Z toggle in RB_DEPTHCONTROL (the correct behavior is still
     // unknown).
     if (pixel_shader != nullptr &&
         pixel_shader->GetForcedEarlyZShaderObject().size() != 0 &&
-        (!(rb_colorcontrol & 0x8) || (rb_colorcontrol & 0x7) == 0x7)) {
+        (!(rb_colorcontrol & 0x8) || (rb_colorcontrol & 0x7) == 0x7) &&
+        !(rb_colorcontrol & 0x10)) {
       description_out.force_early_z = 1;
     }
 
